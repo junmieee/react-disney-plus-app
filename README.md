@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# React Disney+ App 클론코딩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할 수 있는 SPA입니다. React.js를 사용하여 프론트엔드를 구현하였고, 백엔드는 Firebase를 이용하였습니다.
 
-## Available Scripts
 
-In the project directory, you can run:
+## 프로젝트의 실행 방법
 
-### `npm start`
+- `git clone https://github.com/junmieee/react-disney-plus-app.git`
+- `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 프로젝트 데모 영상
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 구현 기능
+* 영화 및 TV 쇼 목록 표시
+* 클릭한 영화 또는 TV 쇼에 대한 정보 표시
+* 인기 있는 콘텐츠 및 새로운 콘텐츠 섹션
+* 검색 기능
+* 로그인/로그아웃 및 회원가입
+* Firebase를 이용한 사용자 인증 및 데이터베이스 연동
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 기술 스택
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"><img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"><img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"><img src="https://img.shields.io/badge/themoviedatabase-01B4E4?style=for-the-badge&logo=The Movie Database&logoColor=white">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 프로젝트 구조
+```
+/src
+├── App.js
+├── components 
+│   ├── Banner.js   //홈 화면 상단에 배치되는 대형 배너
+│   ├── Header.js
+│   ├── Login.js
+│   ├── Nav.js
+│   ├── Row.js
+│   └── index.js
+├── firebase.js
+├── index.css
+├── index.js
+├── requests.js
+└── setupTests.js
+```
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 새로 학습한 내용
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### emotion.js 
+- Component로 만들어 재사용에 용이함
+- 같은 UI를 공유하는 Signin과 Signup컴포넌트에 named export 활용하여 사용함
+- Styled-component와 문법이 매우 유사해 기존에 styled-component에 익숙하다면 적용이 비교적 쉽다.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br/>
 
-### Analyzing the Bundle Size
+## 개선할 사항
+- TypeScript 적용 
+- 실제 백엔드와 연동하여 로그인 기능을 구현
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 추가적으로 만들어 볼 수 있는 기능
 
-### Making a Progressive Web App
+- 모달에 Play버튼을 추가해 관련 Youtube 영상 연결
+- 사용자가 즐겨찾기를 추가하여 사용자가 자신이 좋아하는 영화나 TV 프로그램을 저장하는 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

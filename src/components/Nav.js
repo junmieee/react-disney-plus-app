@@ -125,6 +125,8 @@ const UserImg = styled.img`
 
 const Nav = () => {
 
+    const initailUserData = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : {}
+
     const { pathname } = useLocation();
     console.log(pathname);
 
@@ -132,7 +134,7 @@ const Nav = () => {
     const { scrollY } = useScroll();
     const navigate = useNavigate();
     const [serachValue, setSearchValue] = useState("");
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState(initailUserData);
 
     //UR:SearchParams 인터페이스는 URL 쿼리 문자열을 대상으로 작업할 수 있는 유틸리티 메서드를 정의한다.
 
@@ -159,7 +161,8 @@ const Nav = () => {
     const handleAuth = () => {
         signInWithPopup(auth, provider)
             .then(result => {
-                setUserData(result.user)
+                setUserData(result.user);
+                localStorage.setItem('userData', JSON.stringify(result.user));
 
             })
             .catch(error => {
@@ -169,7 +172,7 @@ const Nav = () => {
 
     const handleChange = (e) => {
         setSearchValue(e.target.value);
-        console.log('타겟', e.target.value)
+        // console.log('타겟', e.target.value)
         navigate(`/search?q=${e.target.value}`);
 
     }

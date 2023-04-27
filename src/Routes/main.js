@@ -35,7 +35,6 @@ bottom: 0; */
 const Mainpage = () => {
   return (
     <Container>
-      <Nav />
       <Banner />
       <Category />
       <Row title="Trending Now" id="TN" fetchUrl={request.fetchTrending} />
