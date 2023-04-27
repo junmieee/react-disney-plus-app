@@ -1,9 +1,9 @@
-# React Disney+ App 클론코딩
+# React Disney+ App Clone
 
-React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할 수 있는 SPA입니다. React.js를 사용하여 프론트엔드를 구현하였고, 백엔드는 Firebase를 이용하였습니다.
+ React.js를 사용하여 프론트엔드를 구현하였고, 백엔드는 Firebase를 이용해 Disney+ 웹사이트 클론
 
 
-## 프로젝트의 실행 방법
+## 프로젝트의 실행
 
 - `git clone https://github.com/junmieee/react-disney-plus-app.git`
 - `npm install`
@@ -15,7 +15,7 @@ React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할
 
 
 
-### 구현 기능
+### 기능
 * 영화 및 TV 쇼 목록 표시
 * 클릭한 영화 또는 TV 쇼에 대한 정보 표시
 * 인기 있는 콘텐츠 및 새로운 콘텐츠 섹션
@@ -35,19 +35,32 @@ React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할
 
 ## 프로젝트 구조
 ```
-/src
+src
+├── components    //앱에서 사용되는 리액트 컴포넌트들을 포함하는 폴더
+│   ├── Footer
+│   ├── Header
+│   ├── HomeSlider
+│   ├── Login
+│   ├── Movies
+│   ├── Navbar
+│   ├── NewDisney
+│   ├── Originals
+│   ├── Signup
+│   └── Trending
+├── context     //Context API를 사용하여 전역적으로 사용되는 정보를 제공
+│   ├── auth-context.js  //인증 관련 정보
+│   └── firebase-context.js  //Firebase와 관련된 정보
+├── firebase     //Firebase와 연결하는 코드 
+│   └── firebase.js
+├── pages    //라우팅된 페이지 컴포넌트
+│   ├── Home
+│   ├── Login
+│   └── Signup
+├── App.css
 ├── App.js
-├── components 
-│   ├── Banner.js   //홈 화면 상단에 배치되는 대형 배너
-│   ├── Header.js
-│   ├── Login.js
-│   ├── Nav.js
-│   ├── Row.js
-│   └── index.js
-├── firebase.js
 ├── index.css
 ├── index.js
-├── requests.js
+├── reportWebVitals.js
 └── setupTests.js
 ```
 
@@ -55,10 +68,8 @@ React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할
 
 ## 새로 학습한 내용
 
-### emotion.js 
-- Component로 만들어 재사용에 용이함
-- 같은 UI를 공유하는 Signin과 Signup컴포넌트에 named export 활용하여 사용함
-- Styled-component와 문법이 매우 유사해 기존에 styled-component에 익숙하다면 적용이 비교적 쉽다.
+### Context API
+- 
 
 
 <br/>
@@ -66,6 +77,7 @@ React Disney+ 앱은 사용자가 디즈니+ 콘텐츠를 검색하고 시청할
 ## 개선할 사항
 - TypeScript 적용 
 - 실제 백엔드와 연동하여 로그인 기능을 구현
+
 
 ## 추가적으로 만들어 볼 수 있는 기능
 
