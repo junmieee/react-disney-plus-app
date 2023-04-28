@@ -93,3 +93,8 @@ const DetailPage = ({
 }
 
 export default DetailPage
+
+
+//Search.js
+
+

@@ -9,4 +9,12 @@ const request = {
     fetchDocumentaries: "/discover/movie?with_genres=99",
 }
 
+const category = [
+    {
+        title: "Popular Movies",
+        path: "/popular",
+        fetchUrl: "https://api.themoviedb.org/3/movie/popular?api_key=API_KEY&language=en-US&page=1",
+    },
+]
+
 export default request;

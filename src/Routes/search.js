@@ -9,6 +9,8 @@ import DetailPage from './detail'
 
 
 
+
+
 const SearchPage = () => {
     const navigate = useNavigate();
 
@@ -24,6 +26,7 @@ const SearchPage = () => {
     let query = useQuery();
     const searchTerm = query.get("q");
     const debouncedSearchTerm = useDebounce(searchTerm, 500);
+    console.log('useLocation', useLocation());
 
     // const handleClick = (movie) => {
     //     setModalOpen(true);
