@@ -9,7 +9,7 @@ function CompanyPage() {
     useEffect(() => {
         async function fetchMovies() {
             const response = await axios.get(
-                `https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_companies=${company}`
+                `https://api.themoviedb.org/3/discover/movie?api_key=API_KEY&with_companies=${company}`
             );
             setMovies(response.data.results);
         }
