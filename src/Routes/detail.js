@@ -32,21 +32,7 @@ const DetailPage = ({
     vote_average,
     setModalOpen
 }) => {
-    // let { movieId } = useParams();
-    // const [movie, setMovie] = useState({})
 
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const response = await axios.get(`/movie/${movieId}`)
-    //         console.log(response)
-    //         setMovie(response.data)
-
-    //     }
-    //     fetchData()
-    // }, [movieId])
-
-    // if (!movie) return null;
     const ref = useRef();
     //console.log('ref', boxref.current)
     useOnClickOutside(ref, () => {

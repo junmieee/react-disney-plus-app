@@ -9,7 +9,6 @@ import Row from './components/Row';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import LoginPage from './Routes/login'
 import MainPage from './Routes/main';
-import DetailPage from './Routes/detail';
 import SearchPage from './Routes/search';
 
 
@@ -31,7 +30,7 @@ function App() {
           <Route index element={<LoginPage />} />
           <Route path="main" element={<MainPage />} />
           {/* <Route path="/search/:movieId" element={<DetailPage />} /> */}
-          <Route path="/:company" element={<CompanyPage />} />
+          <Route path="/company/:id" element={<CompanyPage />} />
 
           <Route path="search" element={<SearchPage />} />
 
