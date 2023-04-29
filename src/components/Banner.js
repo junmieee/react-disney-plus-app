@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import axios from "../api/axios"
-import request from "../api/request"
+import { request } from "../api/request"
 import "./Banner.css"
 import styled from 'styled-components';
 import { BsBoxArrowInLeft } from "react-icons/bs";

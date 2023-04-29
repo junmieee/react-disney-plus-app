@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-
+import { categories } from '../api/request'
 
 const Container = styled.div`
 margin-top: 30px;
@@ -60,23 +60,12 @@ video {
 }
 `
 
-const categories = [
-    { imgname: 'disney', videoname: 'disney', company: 2 },
-    { imgname: 'marvel', videoname: 'marvel', company: 420 },
-    { imgname: 'pixar', videoname: 'pixar', company: 3 },
-    { imgname: 'starwars', videoname: 'star-wars', company: 19551 },
-    { imgname: 'national', videoname: 'national-geographic', company: 1428 },
-];
 
 
 
 
 const Category = () => {
-
-
     return (
-
-
         <Container>
             {categories.map(cat => (
                 <Wrap>
@@ -88,36 +77,6 @@ const Category = () => {
                     </video>
                 </Wrap>
             ))}
-            {/* <Wrap>
-                <img src="/images/viewers-disney.png" alt="disney" />
-                <video autoPlay loop muted>
-                    <source src="/videos/disney.mp4" type='video/mp4' />
-                </video>
-            </Wrap>
-            <Wrap>
-                <img src="/images/viewers-marvel.png" alt="marvel" />
-                <video autoPlay loop muted>
-                    <source src="/videos/marvel.mp4" type='video/mp4' />
-                </video>
-            </Wrap>
-            <Wrap>
-                <img src="/images/viewers-pixar.png" alt="pixar" />
-                <video autoPlay loop muted>
-                    <source src="/videos/pixar.mp4" type='video/mp4' />
-                </video>
-            </Wrap>
-            <Wrap>
-                <img src="/images/viewers-starwars.png" alt="starwars" />
-                <video autoPlay loop muted>
-                    <source src="/videos/star-wars.mp4" type='video/mp4' />
-                </video>
-            </Wrap>
-            <Wrap>
-                <img src="/images/viewers-national.png" alt="national" />
-                <video autoPlay loop muted>
-                    <source src="/videos/national-geographic.mp4" type='video/mp4' />
-                </video>
-            </Wrap> */}
         </Container>
     )
 }

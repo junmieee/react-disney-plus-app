@@ -12,11 +12,11 @@ const request = {
 
 
 const categories = [
-    { name: 'Disney', company: 2 },
-    { name: 'Marvel', company: 420 },
-    { name: 'Pixar', company: 3 },
-    { name: 'Star Wars', company: 19551 },
-    { name: 'National Geographic', company: 1428 },
+    { imgname: 'disney', videoname: 'disney', company: 2 },
+    { imgname: 'marvel', videoname: 'marvel', company: 420 },
+    { imgname: 'pixar', videoname: 'pixar', company: 3 },
+    { imgname: 'starwars', videoname: 'star-wars', company: 19551 },
+    { imgname: 'national', videoname: 'national-geographic', company: 1428 },
 ];
 
-export default request;
+export { request, categories };

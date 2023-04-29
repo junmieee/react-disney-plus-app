@@ -4,7 +4,7 @@ import Category from '../components/Category'
 import Nav from '../components/Nav'
 import Row from '../components/Row'
 import styled from 'styled-components'
-import request from '../api/request'
+import { request } from '../api/request'
 
 const Container = styled.div`
 position: relative;
